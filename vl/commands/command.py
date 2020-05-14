@@ -10,11 +10,11 @@ class Command:
 
     def __enter__(self):
         print("Connecting... ")
-        #  self.con = Connection('cdmuser/cdmuser@//srvhouplmtdb02:1521/cdm',
+        #  self.con = Connection('user:password@//srvhouplmtdbXX/instance1',
                                #  encoding='utf8', nencoding='utf8')
         #  self.cur = self.__db.cursor()
         self.engine = create_engine(
-            'oracle+cx_oracle://cdmuser:C3tDa7aUs3R@srvhouplmtdb02.nov.com/cdm',
+            'oracle+cx_oracle://user:password@srvhouplmtdbXX/instance1',
             # 'oracle+cx_oracle://system:oracle@localhost:49161/xe',
             connect_args={'encoding': 'utf8', 'nencoding': 'utf8'},
             echo=False
